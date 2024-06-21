@@ -1,0 +1,83 @@
+.card {
+  width: 19.2rem;
+  border-radius: 2rem;
+  background: #1b233d;
+  padding: .5rem;
+  margin: .8rem;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem .7rem .2rem 0rem;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card .top_section {
+  height: 25.6rem;
+  border-radius: 1.76rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card .top_section .border {
+  border-bottom-right-radius: .96rem;
+  height: 1.92rem;
+  width: 10.4rem;
+  background: white;
+  background: #1b233d;
+  position: relative;
+  transform: skew(-40deg);
+  box-shadow: -1rem -1rem 0 0 #1b233d;
+}
+
+.card .top_section::before {
+  content: "";
+  position: absolute;
+  top: 1.92rem;
+  left: 0;
+  background: rgba(255, 255, 255, 0);
+  height: 32rem;
+  width: 1.6rem;
+  border-top-left-radius: 1rem;
+  box-shadow: -.5rem -.5rem 0 .2rem #1b233d;
+}
+
+.icons {
+  position: absolute;
+}
+
+.logo {
+  font-size: 1.12rem;
+  padding: 0.16rem 0rem 0rem .96rem;
+}
+
+.top_section {
+  height: 100%;
+}
+
+.bottom_section {
+  margin-top: .16rem;
+  padding: .16rem .32rem;
+  max-height: 4.8rem;
+}
+
+.title {
+  display: block;
+  font-size: 1.536rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  letter-spacing: .1rem;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+
+.item {
+  flex: 30%;  
+  text-align: center;
+  padding: .5rem;
+  color: rgba(170, 222, 243, 0.721);
+}

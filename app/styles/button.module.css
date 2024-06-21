@@ -1,0 +1,38 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    margin-right: .8rem;
+    width: max-content;
+    padding: .5rem 1rem;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 1.68rem;
+    border: 0.1rem solid #8F9092;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 .1rem #fff;
+}
+
+.button:active {
+    box-shadow: 0 .1rem .1rem .1rem #FCFCFC, 0 .1rem .1rem #D6D7D9, 0 -0.1rem .1rem #CECFD1, 0 -0.1rem 0.1rem #FEFEFE, inset 0 0 0.1rem 0.1rem #999, inset 0 0 .3rem #aaa;
+}
+
+.button:focus {
+    box-shadow: 0 0.1rem .1rem .1rem #FCFCFC, 0 .1rem .1rem #D6D7D9, 0 -0.1rem .1rem #CECFD1, 0 -0.1rem .1rem #FEFEFE, inset 0 0 .1rem .1rem #999, inset 0 0 .3rem #aaa;
+}
+
+/* @media screen and (max-width: 855px) {
+    .button {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .button {
+        font-size: 1.3rem;
+    }
+} */

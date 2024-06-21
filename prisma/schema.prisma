@@ -1,0 +1,232 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model all_data {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model anime {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model bollywood {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model hollywood {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model k_drama {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model south {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model trending {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model web_series {
+  id           Int       @id @default(autoincrement())
+  poster_image String    @db.VarChar(255)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  genre        String?   @db.VarChar(25)
+  rating       Float?    @db.Float
+  release_date DateTime? @db.Date
+  description  String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
