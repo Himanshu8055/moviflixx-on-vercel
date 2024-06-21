@@ -27,7 +27,7 @@ const Input: React.FC = () => {
     // const searchResult = `http://localhost:3000${pathname}/${search}`;
 
     // Main
-    const searchResult = `http://moviflixx.netlify.app${pathname}/${search}`;
+    const searchResult = `http://moviflixx.vercel.app${pathname}/${search}`;
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

@@ -23,7 +23,7 @@ const SliderComponent = () => {
 } else {
     pathname = "";
 }
-const websiteName = 'http://moviflixx.netlify.app'
+const websiteName = 'http://moviflixx.vercel.app'
 
   const navLinks = [
     { name: 'Action', href: `${websiteName}${pathname}/action`},
