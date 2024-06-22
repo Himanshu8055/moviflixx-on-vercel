@@ -13,6 +13,7 @@ model all_data {
   title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
@@ -35,13 +36,13 @@ model all_data {
   size_8k      String?   @db.VarChar(10)
 }
 
-
 model anime {
   id           Int       @id @default(autoincrement())
   poster_image String    @db.VarChar(255)
   title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
@@ -70,6 +71,7 @@ model bollywood {
   title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
@@ -98,6 +100,7 @@ model hollywood {
   title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
@@ -126,6 +129,7 @@ model k_drama {
   title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
@@ -210,6 +214,7 @@ model web_series {
   title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)

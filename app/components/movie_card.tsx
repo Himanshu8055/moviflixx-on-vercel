@@ -7,6 +7,7 @@ interface MovieCardProps {
   poster_image: string;
   title: string;
   genre: string;
+  language: string;
   rating: number;
   release_date: Date;
   trailer_url: string;
@@ -35,6 +36,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
   title,
   description,
   genre,
+  language,
   rating,
   trailer_url,
   screenshot_1,
@@ -61,6 +63,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
     { poster_image: poster_image },
     { genre: genre },
     { rating: rating },
+    { language: language },
     { release_date: release_date },
     { title: title },
     { description: description },

@@ -34,23 +34,17 @@
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: #ffffff;
-    margin: 0;
+    margin: 0 0 .5rem 0;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #c4f6ff;
-    margin-top: .5rem;
-}
-
-.releaseDate {
-    font-size: 1.1rem;
+    text-align: left;
+    font-size: 1.2rem;
     font-weight: 400;
-    color: #c4f6ff;
+    color: #f7ff83;
 }
 
 .description {
@@ -107,7 +101,7 @@
 .downloadLinks ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 5rem 0;
     justify-items: center;
 }
 

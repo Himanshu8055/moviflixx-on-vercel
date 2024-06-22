@@ -9,6 +9,7 @@ interface MovieDetailProps {
   title: string;
   description?: string;
   genre: string;
+  language: string;
   rating: number;
   trailer_url: string;
   screenshot_1: string;
@@ -92,6 +93,7 @@ const MovieDetails: React.FC = () => {
     poster_image,
     title,
     genre,
+    language,
     rating,
     description,
     trailer_url,
@@ -118,8 +120,10 @@ const MovieDetails: React.FC = () => {
         <div className={Styles.details}>
           <div>
             <h1 className={Styles.title}>{title}</h1>
-            <p className={Styles.subtitle}>{genre} | Rating: {rating}</p>
-            <p className={Styles.releaseDate}>Release Date: {new Date(release_date).toLocaleDateString()}</p>
+            <p className={Styles.subtitle}>Genre : {genre}</p>
+            <p className={Styles.subtitle}>Rating : {rating}</p>
+            <p className={Styles.subtitle}>Language : {language}</p>
+            <p className={Styles.subtitle}>Release Date: {new Date(release_date).toLocaleDateString()}</p>
             <hr />
           </div>
           <div className='text-center'>
@@ -127,8 +131,6 @@ const MovieDetails: React.FC = () => {
             <a href={trailer_url} target="_blank" rel="noopener noreferrer" className={Styles.trailerButton}>
               Watch Trailer
             </a>
-            <hr />
-
           </div>
         </div>
       </div>
