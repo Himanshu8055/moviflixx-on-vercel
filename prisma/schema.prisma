@@ -42,7 +42,7 @@ model anime {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
@@ -70,7 +70,7 @@ model bollywood {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
@@ -98,7 +98,7 @@ model hollywood {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
@@ -126,7 +126,7 @@ model k_drama {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
@@ -154,7 +154,7 @@ model south {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
@@ -182,7 +182,7 @@ model trending {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
@@ -210,7 +210,7 @@ model web_series {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
