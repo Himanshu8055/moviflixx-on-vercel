@@ -14,7 +14,7 @@ model all_data {
   genre        String?   @db.VarChar(25)
   rating       Float?    @db.Float
   release_date DateTime? @db.Date
-  description  String?   @db.VarChar(255)
+  description  String?   @db.Text
   trailer_url  String?   @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
