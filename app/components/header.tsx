@@ -25,7 +25,7 @@ const Header = () => {
           <div className={Styles.search_header}>
             <InputSearch />
             {/* Link to Join Telegram Channel */}
-            <div className={TelegramButton.button}>Telegram</div>
+            <a className={TelegramButton.button} href="https://t.me/movi_flix" target="_blank" rel="noopener noreferrer">Telegram</a>
           </div>
         </div>
       </div>
