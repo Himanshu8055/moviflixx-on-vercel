@@ -1,8 +1,9 @@
 /* styles/details.module.css */
 .container {
     display: flex;
+    text-align: center;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 2rem auto;
     max-width: 98%;
     background: rgb(123, 218, 74);
@@ -82,6 +83,7 @@
 .screenshotContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .screenshotContainer img {
