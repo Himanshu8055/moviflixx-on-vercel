@@ -1,3 +1,7 @@
 // next.config.js
-module.exports = {}
+module.exports = {
+    images: {
+        domains: ['media.themoviedb.org'],
+      },
+}
   
