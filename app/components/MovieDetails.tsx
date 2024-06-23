@@ -135,62 +135,62 @@ const MovieDetails: React.FC = () => {
         </div>
       </div>
       <div className={Styles.container}>
-      <div className={Styles.downloadLinks}>
-        <h2>: SCREENSHOTS :</h2>
-        <div className={Styles.screenshotContainer}>
-          <img src={screenshot_1} alt={title} />
-          <img src={screenshot_2} alt={title} />
-          <img src={screenshot_3} alt={title} />
-          <img src={screenshot_4} alt={title} />
-          <img src={screenshot_5} alt={title} />
+        <div className={Styles.downloadLinks}>
+          <h2>: SCREENSHOTS :</h2>
+          <div className={Styles.screenshotContainer}>
+            {movieDetails.screenshot_1 && (<img src={screenshot_1} alt={title} />)}
+            {movieDetails.screenshot_2 && (<img src={screenshot_2} alt={title} />)}
+            {movieDetails.screenshot_3 && (<img src={screenshot_3} alt={title} />)}
+            {movieDetails.screenshot_4 && (<img src={screenshot_4} alt={title} />)}
+            {movieDetails.screenshot_5 && (<img src={screenshot_5} alt={title} />)}
+          </div>
+          <hr />
+          <h2>: DOWNLOAD LINKS :</h2>
+          <ul>
+            {movieDetails.link_480p && (
+              <li>
+                <a href={shortenedUrls.link_480p} target="_blank" rel="noopener noreferrer">
+                  Download 480p | Size: {size_480p}
+                </a>
+              </li>
+            )}
+            {movieDetails.link_720p && (
+              <li>
+                <a href={shortenedUrls.link_720p} target="_blank" rel="noopener noreferrer">
+                  Download 720p | Size: {size_720p}
+                </a>
+              </li>
+            )}
+            {movieDetails.link_1080p && (
+              <li>
+                <a href={shortenedUrls.link_1080p} target="_blank" rel="noopener noreferrer">
+                  Download 1080p | Size: {size_1080p}
+                </a>
+              </li>
+            )}
+            {movieDetails.link_2k && (
+              <li>
+                <a href={shortenedUrls.link_2k} target="_blank" rel="noopener noreferrer">
+                  Download 2K | Size: {size_2k}
+                </a>
+              </li>
+            )}
+            {movieDetails.link_4k && (
+              <li>
+                <a href={shortenedUrls.link_4k} target="_blank" rel="noopener noreferrer">
+                  Download 4K | Size: {size_4k}
+                </a>
+              </li>
+            )}
+            {movieDetails.link_8k && (
+              <li>
+                <a href={shortenedUrls.link_8k} target="_blank" rel="noopener noreferrer">
+                  Download 8K | Size: {size_8k}
+                </a>
+              </li>
+            )}
+          </ul>
         </div>
-        <hr />
-        <h2>: DOWNLOAD LINKS :</h2>
-        <ul>
-          {movieDetails.link_480p && (
-            <li>
-              <a href={shortenedUrls.link_480p} target="_blank" rel="noopener noreferrer">
-                Download 480p | Size: {size_480p}
-              </a>
-            </li>
-          )}
-          {movieDetails.link_720p && (
-            <li>
-              <a href={shortenedUrls.link_720p} target="_blank" rel="noopener noreferrer">
-                Download 720p | Size: {size_720p}
-              </a>
-            </li>
-          )}
-          {movieDetails.link_1080p && (
-            <li>
-              <a href={shortenedUrls.link_1080p} target="_blank" rel="noopener noreferrer">
-                Download 1080p | Size: {size_1080p}
-              </a>
-            </li>
-          )}
-          {movieDetails.link_2k && (
-            <li>
-              <a href={shortenedUrls.link_2k} target="_blank" rel="noopener noreferrer">
-                Download 2K | Size: {size_2k}
-              </a>
-            </li>
-          )}
-          {movieDetails.link_4k && (
-            <li>
-              <a href={shortenedUrls.link_4k} target="_blank" rel="noopener noreferrer">
-                Download 4K | Size: {size_4k}
-              </a>
-            </li>
-          )}
-          {movieDetails.link_8k && (
-            <li>
-              <a href={shortenedUrls.link_8k} target="_blank" rel="noopener noreferrer">
-                Download 8K | Size: {size_8k}
-              </a>
-            </li>
-          )}
-        </ul>
-      </div>
       </div>
     </div>
   );
