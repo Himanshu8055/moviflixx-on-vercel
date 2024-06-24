@@ -8,7 +8,8 @@ const fetchMovies = async () => {
   const posts = await prisma.all_data.findMany({
     orderBy:{
     release_date: 'desc'
-   }, 
+   },
+   take: 100, 
   });
   await prisma.$disconnect();
   return posts;
@@ -27,3 +28,4 @@ const Page = async () => {
 };
 
 export default Page;
+

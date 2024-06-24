@@ -146,6 +146,7 @@ const MovieDetails: React.FC = () => {
           </div>
           <hr />
           <h2>: DOWNLOAD LINKS :</h2>
+          <p className='text-2xl font-mono mb-10'>Note : If fast Download Button does not work , Please use Download button or Download Mirror</p>
           <ul>
             {movieDetails.link_480p && (
               <li>
