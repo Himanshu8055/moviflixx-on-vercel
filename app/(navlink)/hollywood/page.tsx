@@ -6,9 +6,10 @@ const prisma = new PrismaClient();
 
 const fetchMovies = async () => {
   const posts = await prisma.hollywood.findMany({
-    orderBy:{
-    release_date: 'desc'
-   }, 
+    orderBy: {
+      release_date: 'desc'
+    },
+    take: 100,
   });
   await prisma.$disconnect();
   return posts;

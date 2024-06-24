@@ -26,8 +26,8 @@ const fetchMovies = async (title: string) => {
         },
         orderBy: {
             release_date: 'desc'
-        }
-
+        },
+        take: 100, 
     });
     await prisma.$disconnect();
     return posts;

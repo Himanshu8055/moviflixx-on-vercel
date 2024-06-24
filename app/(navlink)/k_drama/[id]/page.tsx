@@ -8,8 +8,6 @@ const prisma = new PrismaClient();
 
 const fetchMovies = async (title: string) => {
 
-
-
     const posts = await prisma.k_drama.findMany({
         where: {
             OR: [
@@ -27,7 +25,8 @@ const fetchMovies = async (title: string) => {
         },
         orderBy: {
             release_date: 'desc'
-        }
+        },
+        take: 100, 
 
     });
     await prisma.$disconnect();
