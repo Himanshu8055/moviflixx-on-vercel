@@ -7,20 +7,12 @@ const navbar = () => {
 
   const navLinks = [
     {
-      name: 'Trending',
-      href: '/trending',
-    },
-    {
-      name: 'Bollywood',
-      href: '/bollywood',
+      name: 'Indian',
+      href: '/indian',
     },
     {
       name: 'Hollywood',
       href: '/hollywood',
-    },
-    {
-      name: 'South',
-      href: '/south',
     },
     {
       name: 'Series',
