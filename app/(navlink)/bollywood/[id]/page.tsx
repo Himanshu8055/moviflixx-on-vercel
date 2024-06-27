@@ -10,7 +10,7 @@ const fetchMovies = async (title: string) => {
 
 
 
-    const posts = await prisma.bollywood.findMany({
+    const posts = await prisma.indian.findMany({
         where: {
             OR: [
                 {

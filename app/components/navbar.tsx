@@ -22,10 +22,6 @@ const navbar = () => {
       name: 'Anime',
       href: '/anime',
     },
-    {
-      name: 'K-Drama',
-      href: '/k_drama',
-    },
   ];
 
 

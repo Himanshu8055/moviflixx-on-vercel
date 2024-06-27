@@ -5,7 +5,7 @@ import MovieCard from '../../components/movie_card';
 const prisma = new PrismaClient();
 
 const fetchMovies = async () => {
-  const posts = await prisma.bollywood.findMany({
+  const posts = await prisma.indian.findMany({
     orderBy:{
     release_date: 'desc'
    }, 
