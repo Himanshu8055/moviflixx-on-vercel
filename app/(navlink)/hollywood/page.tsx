@@ -9,7 +9,7 @@ const fetchMovies = async () => {
     orderBy: {
       release_date: 'desc'
     },
-    take: 100,
+    take: 210,
   });
   await prisma.$disconnect();
   return posts;
@@ -19,7 +19,7 @@ const Page = async () => {
   const movies = await fetchMovies();
 
   return (
-    <div className="m-2 flex flex-wrap">
+    <div className="m-2 flex flex-wrap justify-center">
       {movies.map((movie: any) => (
         <MovieCard key={movie.id} {...movie} />
       ))}

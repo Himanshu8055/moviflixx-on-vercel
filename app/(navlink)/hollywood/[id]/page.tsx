@@ -42,7 +42,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
     const movies = await fetchMovies(search);
 
     return (
-        <div className="m-2 flex flex-wrap">
+        <div className="m-2 flex flex-wrap justify-center">
             {movies.map((movie: any) => (
                 <MovieCard key={movie.id} {...movie} />
             ))}

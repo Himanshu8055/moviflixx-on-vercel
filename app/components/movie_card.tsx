@@ -1,91 +1,47 @@
 "use client";
-import React from 'react';
-import Styles from '.././styles/cards.module.css'
-import { useRouter } from 'next/navigation'
+import React, { useEffect, useRef, useState } from 'react';
+import Styles from '../styles/cards.module.css';
+import { useRouter, usePathname } from 'next/navigation';
 
 interface MovieCardProps {
+  id: number;
   poster_image: string;
   title: string;
-  genre: string;
-  language: string;
-  rating: number;
   release_date: Date;
-  trailer_url: string;
-  description?: string;
-  screenshot_1: string;
-  screenshot_2: string;
-  screenshot_3: string;
-  screenshot_4: string;
-  screenshot_5: string;
-  link_480p: string;
-  size_480p: string;
-  link_720p: string;
-  size_720p: string;
-  link_1080p: string;
-  size_1080p: string;
-  size_2k: string;
-  link_2k: string;
-  link_4k: string;
-  size_4k: string;
-  link_8k: string;
-  size_8k: string;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({
+  id,
   poster_image,
   title,
-  description,
-  genre,
-  language,
-  rating,
-  trailer_url,
-  screenshot_1,
-  screenshot_2,
-  screenshot_3,
-  screenshot_4,
-  screenshot_5,
-  link_480p,
-  link_720p,
-  link_1080p,
-  link_2k,
-  link_4k,
-  link_8k,
-  size_480p,
-  size_720p,
-  size_1080p,
-  size_2k,
-  size_4k,
-  size_8k,
   release_date,
 }) => {
+  const [isInView, setIsInView] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
-  const detail = [
-    { poster_image: poster_image },
-    { genre: genre },
-    { rating: rating },
-    { language: language },
-    { release_date: release_date },
-    { title: title },
-    { description: description },
-    { trailer_url: trailer_url },
-    { screenshot_1: screenshot_1 },
-    { screenshot_2: screenshot_2 },
-    { screenshot_3: screenshot_3 },
-    { screenshot_4: screenshot_4 },
-    { screenshot_5: screenshot_5 },
-    { link_480p: link_480p },
-    { link_720p: link_720p },
-    { link_1080p: link_1080p },
-    { link_2k: link_2k },
-    { link_4k: link_4k },
-    { link_8k: link_8k },
-    { size_480p: size_480p },
-    { size_720p: size_720p },
-    { size_1080p: size_1080p },
-    { size_2k: size_2k },
-    { size_4k: size_4k },
-    { size_8k: size_8k }
-  ];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
 
   const formatDate = (date: Date) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -96,20 +52,41 @@ const MovieCard: React.FC<MovieCardProps> = ({
 
   const router = useRouter();
 
+  let pathname = usePathname().toString();
+
+  if (pathname.startsWith('/anime')) {
+    pathname = '/anime';
+  } else if (pathname.startsWith('/hollywood')) {
+    pathname = '/hollywood';
+  } else if (pathname.startsWith('/indian')) {
+    pathname = '/indian';
+  } else if (pathname.startsWith('/shows')) {
+    pathname = '/shows';
+  } else if (pathname.startsWith('/series')) {
+    pathname = '/series';
+  } else {
+    pathname = '';
+  }
+
+  // Localhost
+  // const searchResult = `http://localhost:3000${pathname}/details/${id}`;
+
+  // Main
+  const searchResult = `http://moviflixx.netlify.app${pathname}/details/${id}`;
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const stringifiedDetail = JSON.stringify(detail);
-    router.push(`/details?detail=${encodeURIComponent(stringifiedDetail)}`);
+    router.push(searchResult);
   };
 
   return (
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit}>
       <button type="submit">
-        <div className={Styles.card}>
+        <div className={Styles.card} ref={cardRef}>
           <div
             className={Styles.top_section}
             style={{
-              backgroundImage: `url(${poster_image})`,
+              backgroundImage: isInView ? `url(${poster_image})` : 'none',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -129,4 +106,3 @@ const MovieCard: React.FC<MovieCardProps> = ({
 };
 
 export default MovieCard;
-

@@ -7,20 +7,24 @@ const navbar = () => {
 
   const navLinks = [
     {
-      name: 'Indian',
-      href: '/indian',
+      name: 'Anime',
+      href: '/anime',
     },
     {
       name: 'Hollywood',
       href: '/hollywood',
     },
     {
+      name: 'Indian',
+      href: '/indian',
+    },
+    {
       name: 'Series',
       href: '/series',
     },
     {
-      name: 'Anime',
-      href: '/anime',
+      name: 'Shows',
+      href: '/shows',
     },
   ];
 

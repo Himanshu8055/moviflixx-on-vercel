@@ -8,14 +8,14 @@ const Input: React.FC = () => {
     const router = useRouter(); // Use useRouter hook correctly
     let pathname = usePathname().toString();
 
-    if (pathname.startsWith("/trending")) {
-        pathname = "/trending";
-    } else if (pathname.startsWith("/bollywood")) {
-        pathname = "/bollywood";
+    if (pathname.startsWith("/anime")) {
+        pathname = "/anime";
     } else if (pathname.startsWith("/hollywood")) {
         pathname = "/hollywood";
-    } else if (pathname.startsWith("/south")) {
-        pathname = "/south";
+    } else if (pathname.startsWith("/indian")) {
+        pathname = "/indian";
+    } else if (pathname.startsWith("/shows")) {
+        pathname = "/shows";
     } else if (pathname.startsWith("/series")) {
         pathname = "/series";
     } else {

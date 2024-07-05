@@ -5,7 +5,6 @@
   padding: .5rem;
   margin: .8rem;
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0rem .7rem .2rem 0rem;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -23,7 +22,7 @@
 
 .card .top_section .border {
   border-bottom-right-radius: .96rem;
-  height: 1.92rem;
+  height: 1.8rem;
   width: 10.4rem;
   background: white;
   background: #1b233d;
@@ -35,7 +34,7 @@
 .card .top_section::before {
   content: "";
   position: absolute;
-  top: 1.92rem;
+  top: 1.78rem;
   left: 0;
   background: rgba(255, 255, 255, 0);
   height: 32rem;
@@ -49,8 +48,8 @@
 }
 
 .logo {
-  font-size: 1.12rem;
-  padding: 0.16rem 0rem 0rem .96rem;
+  font-size: 1rem;
+  padding: 0rem 0rem 0rem 1rem;
 }
 
 .top_section {
@@ -65,11 +64,10 @@
 
 .title {
   display: block;
-  font-size: 1.536rem;
-  font-weight: bolder;
+  font-size: 1.56rem;
+  font-weight: 400;
   color: white;
   text-align: center;
-  letter-spacing: .1rem;
   overflow: scroll;
   scrollbar-width: none;
 }

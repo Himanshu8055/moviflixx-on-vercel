@@ -1,7 +1,7 @@
 .navbar {
   width: fit-content;
-  margin-right: .5rem;
-  margin-left: .5rem;
+  margin: 0 .5rem;
+  padding: 0 2rem;
   backdrop-filter: blur(3.2rem);
   box-shadow: 0rem 0rem 1.6rem rgba(227, 228, 237, 0.37);
   border: .1rem solid rgba(255, 255, 255, 0.18);
@@ -15,7 +15,7 @@
 
 .a {
   color: #fff;
-  font-size: 1rem;
+  font-size: 2rem;
   text-decoration: none;
   margin-right: .5rem;
   padding: 0.8rem;
@@ -45,13 +45,13 @@
 
 @media screen and (max-width: 500px) {
   .navbar a{
-      font-size: .95rem;
+      font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 475px) {
   .navbar a{
-      font-size: .91rem;
+      font-size: 1.2rem;
   }
 }
 
@@ -60,3 +60,4 @@
       font-size: 0.91rem;
   }
 }
+

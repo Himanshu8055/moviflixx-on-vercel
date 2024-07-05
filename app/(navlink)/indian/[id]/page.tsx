@@ -2,13 +2,15 @@
 
 import React from 'react';
 import { PrismaClient } from '@prisma/client';
-import MovieCard from '../components/movie_card';
+import MovieCard from '@/app/components/movie_card';
 
 const prisma = new PrismaClient();
 
 const fetchMovies = async (title: string) => {
 
-    const posts = await prisma.all_data.findMany({
+
+
+    const posts = await prisma.indian.findMany({
         where: {
             OR: [
                 {
@@ -23,10 +25,10 @@ const fetchMovies = async (title: string) => {
                 },
             ]
         },
-        orderBy:{
+        orderBy: {
             release_date: 'desc'
         },
-        take: 120, 
+        take: 100,
     });
     await prisma.$disconnect();
     return posts;
