@@ -9,19 +9,19 @@ datasource db {
 
 model all_data {
   id           Int       @id @default(autoincrement())
-  poster_image String    @db.VarChar(255)
-  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(255)
   genre        String?   @db.VarChar(100)
   rating       Float?    @db.Float
   language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
-  trailer_url  String?   @db.VarChar(255)
+  poster_image String    @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
   screenshot_3 String?   @db.VarChar(255)
   screenshot_4 String?   @db.VarChar(255)
   screenshot_5 String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
   link_480p    String?   @db.VarChar(255)
   size_480p    String?   @db.VarChar(10)
   link_720p    String?   @db.VarChar(255)
@@ -38,19 +38,19 @@ model all_data {
 
 model anime {
   id           Int       @id @default(autoincrement())
-  poster_image String    @db.VarChar(255)
-  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(255)
   genre        String?   @db.VarChar(100)
   rating       Float?    @db.Float
   language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
-  trailer_url  String?   @db.VarChar(255)
+  poster_image String    @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
   screenshot_3 String?   @db.VarChar(255)
   screenshot_4 String?   @db.VarChar(255)
   screenshot_5 String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
   link_480p    String?   @db.VarChar(255)
   size_480p    String?   @db.VarChar(10)
   link_720p    String?   @db.VarChar(255)
@@ -67,19 +67,19 @@ model anime {
 
 model hollywood {
   id           Int       @id @default(autoincrement())
-  poster_image String    @db.VarChar(255)
-  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(255)
   genre        String?   @db.VarChar(100)
   rating       Float?    @db.Float
   language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
-  trailer_url  String?   @db.VarChar(255)
+  poster_image String    @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
   screenshot_3 String?   @db.VarChar(255)
   screenshot_4 String?   @db.VarChar(255)
   screenshot_5 String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
   link_480p    String?   @db.VarChar(255)
   size_480p    String?   @db.VarChar(10)
   link_720p    String?   @db.VarChar(255)
@@ -96,19 +96,19 @@ model hollywood {
 
 model web_series {
   id           Int       @id @default(autoincrement())
-  poster_image String    @db.VarChar(255)
-  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(255)
   genre        String?   @db.VarChar(100)
   rating       Float?    @db.Float
   language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
-  trailer_url  String?   @db.VarChar(255)
+  poster_image String    @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
   screenshot_3 String?   @db.VarChar(255)
   screenshot_4 String?   @db.VarChar(255)
   screenshot_5 String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
   link_480p    String?   @db.VarChar(255)
   size_480p    String?   @db.VarChar(10)
   link_720p    String?   @db.VarChar(255)
@@ -125,19 +125,48 @@ model web_series {
 
 model indian {
   id           Int       @id @default(autoincrement())
-  poster_image String    @db.VarChar(255)
-  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(50)
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(255)
   genre        String?   @db.VarChar(100)
   rating       Float?    @db.Float
   language     String?   @db.VarChar(45)
   release_date DateTime? @db.Date
   description  String?   @db.Text
-  trailer_url  String?   @db.VarChar(255)
+  poster_image String    @db.VarChar(255)
   screenshot_1 String?   @db.VarChar(255)
   screenshot_2 String?   @db.VarChar(255)
   screenshot_3 String?   @db.VarChar(255)
   screenshot_4 String?   @db.VarChar(255)
   screenshot_5 String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
+  link_480p    String?   @db.VarChar(255)
+  size_480p    String?   @db.VarChar(10)
+  link_720p    String?   @db.VarChar(255)
+  size_720p    String?   @db.VarChar(10)
+  link_1080p   String?   @db.VarChar(255)
+  size_1080p   String?   @db.VarChar(10)
+  link_2k      String?   @db.VarChar(255)
+  size_2k      String?   @db.VarChar(10)
+  link_4k      String?   @db.VarChar(255)
+  size_4k      String?   @db.VarChar(10)
+  link_8k      String?   @db.VarChar(255)
+  size_8k      String?   @db.VarChar(10)
+}
+
+model tv_shows {
+  id           Int       @id @default(autoincrement())
+  title        String    @unique(map: "tittle_UNIQUE") @db.VarChar(255)
+  genre        String?   @db.VarChar(100)
+  rating       Float?    @db.Float
+  language     String?   @db.VarChar(45)
+  release_date DateTime? @db.Date
+  description  String?   @db.Text
+  poster_image String    @db.VarChar(255)
+  screenshot_1 String?   @db.VarChar(255)
+  screenshot_2 String?   @db.VarChar(255)
+  screenshot_3 String?   @db.VarChar(255)
+  screenshot_4 String?   @db.VarChar(255)
+  screenshot_5 String?   @db.VarChar(255)
+  trailer_url  String?   @db.VarChar(255)
   link_480p    String?   @db.VarChar(255)
   size_480p    String?   @db.VarChar(10)
   link_720p    String?   @db.VarChar(255)
