@@ -1,5 +1,4 @@
 // Page.tsx (Server-Side Rendering)
-
 import React from 'react';
 import { PrismaClient } from '@prisma/client';
 import MovieCard from '@/app/components/movie_card';
@@ -8,7 +7,9 @@ const prisma = new PrismaClient();
 
 const fetchMovies = async (title: string) => {
 
-    const posts = await prisma.tv_shows.findMany({
+
+
+    const posts = await prisma.all_collection.findMany({
         where: {
             OR: [
                 {
@@ -21,15 +22,12 @@ const fetchMovies = async (title: string) => {
                         contains: title,
                     },
                 },
-                
-               
             ]
         },
         orderBy: {
             release_date: 'desc'
         },
-        take: 100, 
-
+        take: 120, 
     });
     await prisma.$disconnect();
     return posts;

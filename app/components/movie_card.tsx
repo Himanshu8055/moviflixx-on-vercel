@@ -72,7 +72,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
   // const searchResult = `http://localhost:3000${pathname}/details/${id}`;
 
   // Main
-  const searchResult = `http://moviflixx.netlify.app${pathname}/details/${id}`;
+  const searchResult = `http://moviflixx.vercel.app${pathname}/details/${id}`;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -9,7 +9,7 @@ const fetchMovies = async (title: string) => {
 
 
 
-    const posts = await prisma.anime.findMany({
+    const posts = await prisma.all_collection.findMany({
         where: {
             OR: [
                 {

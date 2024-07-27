@@ -5,11 +5,14 @@ import MovieCard from '../../components/movie_card';
 const prisma = new PrismaClient();
 
 const fetchMovies = async () => {
-  const posts = await prisma.tv_shows.findMany({
-    orderBy:{
-    release_date: 'desc'
-   }, 
-   take: 120, 
+  const posts = await prisma.all_collection.findMany({
+    where: {
+      type: 'Shows'
+    },
+    orderBy: {
+      release_date: 'desc'
+    },
+    take: 210,
   });
   await prisma.$disconnect();
   return posts;

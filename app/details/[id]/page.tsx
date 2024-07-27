@@ -6,7 +6,7 @@ import Styles from '@/app/styles/details.module.css';
 const prisma = new PrismaClient();
 
 const fetchMovies = async (id: number) => {
-  const movie = await prisma.all_data.findUnique({
+  const movie = await prisma.all_collection.findUnique({
     where: {
       id: id,
     },
