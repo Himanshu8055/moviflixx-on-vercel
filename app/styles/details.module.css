@@ -75,14 +75,11 @@
 }
 
 .screenshotContainer {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .screenshotContainer img {
-    margin: .5rem;
-    height: 25rem;
+    width: 80%;
     background-size: cover;
     background-image: center;
 }
