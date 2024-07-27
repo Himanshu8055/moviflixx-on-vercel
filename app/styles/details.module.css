@@ -75,13 +75,15 @@
 }
 
 .screenshotContainer {
-    justify-content: center;
+    justify-items: center;
 }
 
 .screenshotContainer img {
-    justify-content: center;
-    width: 80%;
-    margin: .5rem;
+    margin: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     background-size: cover;
     background-image: center;
 }
