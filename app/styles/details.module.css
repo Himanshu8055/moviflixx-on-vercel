@@ -79,7 +79,9 @@
 }
 
 .screenshotContainer img {
+    justify-content: center;
     width: 80%;
+    margin: .5rem;
     background-size: cover;
     background-image: center;
 }
