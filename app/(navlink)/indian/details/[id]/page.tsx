@@ -128,45 +128,46 @@ const Page = async ({ params }: PageProps) => {
           <h2>: DOWNLOAD LINKS :</h2>
           <p className='text-2xl font-mono mb-10'>Note : If fast Download Button does not work , Please use Download button or Download Mirror</p>
           <ul>
-            {link_480p && (
+          {link_480p && (
               <li>
-                <a href={shortenedUrls.link_480p || '#'} target="_blank" rel="noopener noreferrer">
-                  Download 480p | Size: {size_480p}
+                <a href={shortenedUrls?.link_480p || '#'} target="_blank" rel="noopener noreferrer">
+                  Download 480p {size_480p && <span>| Size: {size_480p}</span>}
                 </a>
               </li>
             )}
+
             {link_720p && (
               <li>
                 <a href={shortenedUrls.link_720p || '#'} target="_blank" rel="noopener noreferrer">
-                  Download 720p | Size: {size_720p}
+                  Download 720p {size_720p && <span>| Size: {size_720p}</span>}
                 </a>
               </li>
             )}
             {link_1080p && (
               <li>
                 <a href={shortenedUrls.link_1080p || '#'} target="_blank" rel="noopener noreferrer">
-                  Download 1080p | Size: {size_1080p}
+                  Download 1080p {size_1080p && <span>| Size: {size_1080p}</span>}
                 </a>
               </li>
             )}
             {link_2k && (
               <li>
                 <a href={shortenedUrls.link_2k || '#'} target="_blank" rel="noopener noreferrer">
-                  Download 2K | Size: {size_2k}
+                  Download 2K {size_2k && <span>| Size: {size_2k}</span>}
                 </a>
               </li>
             )}
             {link_4k && (
               <li>
                 <a href={shortenedUrls.link_4k || '#'} target="_blank" rel="noopener noreferrer">
-                  Download 4K | Size: {size_4k}
+                  Download 4K {size_4k && <span>| Size: {size_4k}</span>}
                 </a>
               </li>
             )}
             {link_8k && (
               <li>
                 <a href={shortenedUrls.link_8k || '#'} target="_blank" rel="noopener noreferrer">
-                  Download 8K | Size: {size_8k}
+                  Download 8K {size_8k && <span>| Size: {size_8k}</span>}
                 </a>
               </li>
             )}

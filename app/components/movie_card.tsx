@@ -64,6 +64,8 @@ const MovieCard: React.FC<MovieCardProps> = ({
     pathname = '/shows';
   } else if (pathname.startsWith('/series')) {
     pathname = '/series';
+  } else if (pathname.startsWith('/adult')) {
+    pathname = '/adult';
   } else {
     pathname = '';
   }
