@@ -28,7 +28,6 @@ const navbar = () => {
     },
   ];
 
-
   return (
     <div className={Styles.navbardevice}>
       <nav className={Styles.navbar}>
